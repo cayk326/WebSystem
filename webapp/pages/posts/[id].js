@@ -12,8 +12,9 @@ export default function PostData({ post }) {
     <div className="space-y-5 w-full">
       <div className="flex justify-center flex-col items-center mb-5">
         <h1 className="text-3xl mb-3 font-bold">{post.title}</h1>
-        <p className="mb-3">{post.created_at}</p>
-        <div className="border w-14"></div>
+        <p className="mb-5 font-bold">{`著者: ${post.author}`}</p>
+        <p className="mb-3">{`読み終わった日: ${post.finished_date}`}</p>
+        <div className="border w-20"></div>
       </div>
       <p className="whitespace-pre-wrap">{post.content}</p>
     </div>

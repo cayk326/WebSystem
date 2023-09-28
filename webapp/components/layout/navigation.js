@@ -10,6 +10,9 @@ export default function Navigation() {
         <Link href="/about">
           <p className="mr-5">About</p>
         </Link>
+        <Link href="/create">
+          <p className="mr-5">きろく</p>
+        </Link>
       </nav>
     </header>
   );

@@ -8,9 +8,9 @@ export default function Home({ posts }) {
   return (
     <div>
       <Head>
-        <title>NextJS Startup</title>
+        <title>Book Review Management App</title>
       </Head>
-      <div className="mb-10 p-3 border rounded">
+      <div className="mb-10 p-3">
         <Image
           className="object-cover rounded"
           src="/top.png"
