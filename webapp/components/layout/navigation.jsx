@@ -6,12 +6,15 @@ export default function Navigation() {
       <Link href="/">
         <p className="text-4xl font-bold text-red-300">どくしょのきろく</p>
       </Link>
-      <nav className="ml-auto">
+      <nav className="ml-auto flex items-center">
+        <Link href="/create">
+          <p className="mr-5">きろく</p>
+        </Link>
         <Link href="/about">
           <p className="mr-5">About</p>
         </Link>
-        <Link href="/create">
-          <p className="mr-5">きろく</p>
+        <Link href="/login">
+          <p className="mr-5">ろぐいん</p>
         </Link>
       </nav>
     </header>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { SessionProvider, useSession, signIn, signOut } from 'next-auth/react';
 import { NextPage } from 'next';
+import BaseButton from 'components/atom/button/BaseButton';
 
 const Login = () => {
   const { data: session } = useSession();
@@ -19,7 +20,8 @@ const Login = () => {
         !session && (
           <div>
             <p>ログインしていません</p>
-            <button onClick={() => signIn()}>ログイン</button>
+            <BaseButton label="ログイン" onClick={() => signIn()}/>
+
           </div>
         )
       }
