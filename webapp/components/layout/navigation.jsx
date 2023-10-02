@@ -2,19 +2,19 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <header className="container flex flex-row items-center mx-auto px-5 py-14 max-w-screen-lg">
+    <header className="container flex flex-row items-center mx-auto px-5 py-12 max-w-screen-lg">
       <Link href="/">
-        <p className="text-4xl font-bold text-red-300">どくしょのきろく</p>
+        <p className="text-4xl font-bold text-fuchsia-300">どくしょのきろく</p>
       </Link>
       <nav className="ml-auto flex items-center">
         <Link href="/create">
-          <p className="mr-5">きろく</p>
+          <p className="mr-5 text-gray-800 font-medium">きろく</p>
         </Link>
         <Link href="/about">
-          <p className="mr-5">About</p>
+          <p className="mr-5 text-gray-800 font-medium">About</p>
         </Link>
         <Link href="/profile1">
-          <p className="mr-5">ろぐいん</p>
+          <p className="mr-5 text-gray-800 font-medium">ろぐいん</p>
         </Link>
       </nav>
     </header>

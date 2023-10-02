@@ -15,19 +15,12 @@ export const UserCard = memo((props) => {
       <dl className="mt-4">
         <div className="flex mb-2">
           <dt className="w-16 font-semibold">Mail</dt>
-          <dd className="flex-grow">{user.email}</dd>
+          {/*{user.email}メアドが見えてしまうから使わない*/}
+          <dd className="flex-grow">test.mail.com</dd>
         </div>
         <div className="flex mb-2">
           <dt className="w-16 font-semibold">TEL</dt>
-          <dd className="flex-grow">{user.phone}</dd>
-        </div>
-        <div className="flex mb-2">
-          <dt className="w-16 font-semibold">Corp</dt>
-          <dd className="flex-grow">{user.company.name}</dd>
-        </div>
-        <div className="flex mb-2">
-          <dt className="w-16 font-semibold">WEB</dt>
-          <dd className="flex-grow">{user.website}</dd>
+          <dd className="flex-grow">012-3456-7890</dd>
         </div>
       </dl>
     </div>
