@@ -13,7 +13,7 @@ export default function Navigation() {
         <Link href="/about">
           <p className="mr-5">About</p>
         </Link>
-        <Link href="/login">
+        <Link href="/profile1">
           <p className="mr-5">ろぐいん</p>
         </Link>
       </nav>

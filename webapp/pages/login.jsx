@@ -12,15 +12,15 @@ const Login = () => {
         session && (
           <div>
             <h1>ようこそ, {session.user && session.user.email}</h1>
-            <button onClick={() => signOut()}>ログアウト</button>
+            <button onClick={() => signOut()}>ろぐあうと</button>
           </div>
         )
       }
       {
         !session && (
           <div>
-            <p>ログインしていません</p>
-            <BaseButton label="ログイン" onClick={() => signIn()}/>
+            <p>ろぐいんしてないよ</p>
+            <BaseButton label="ろぐいん" onClick={() => signIn()}/>
 
           </div>
         )
