@@ -23,6 +23,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('products.urls')),# api用URL
+    path("api/auth/", include("dj_rest_auth.urls")),  # 追加
+    path("api/social/login/", include("accounts.urls")),  # 追加
 ]
 
 

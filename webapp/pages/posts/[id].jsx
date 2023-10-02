@@ -10,13 +10,15 @@ export default function PostData({ post }) {
 
   return (
     <div className="space-y-5 w-full">
-      <div className="flex justify-center flex-col items-center mb-5">
-        <h1 className="text-3xl mb-3 font-bold">{post.title}</h1>
-        <p className="mb-5 font-bold">{`著者: ${post.author}`}</p>
-        <p className="mb-3">{`読み終わった日: ${post.finished_date}`}</p>
-        <div className="border w-20"></div>
+      <div className="flex justify-center flex-col items-center m-5">
+        <h1 className="text-3xl mb-3 font-bold text-gray-800">{post.title}</h1>
+        <p className="mb-5 font-bold text-gray-800">{`著者: ${post.author}`}</p>
+        <p className="mb-3 text-gray-800 font-normal">{`読み終わった日: ${post.finished_date}`}</p>
+        <div className="border w-28"></div>
       </div>
-      <p className="whitespace-pre-wrap">{post.content}</p>
+      <div id="content" className="whitespace-pre-wrap text-gray-800 font-medium m-5">
+        <p>{post.content}</p>
+      </div>
     </div>
   );
 }

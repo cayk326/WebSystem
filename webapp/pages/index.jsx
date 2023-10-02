@@ -13,18 +13,18 @@ export default function Home({ posts }) {
       <div className="mb-10 p-3">
         <Image
           className="object-cover rounded"
-          src="/top.png"
+          src="/top2.jpg"
           alt="top"
           width={1280}
           height={500}
         />
       </div>
       <div className="flex justify-center flex-col items-center mb-10">
-        <div className="text-lg mb-3">Review Posts</div>
+        <div className="text-lg mb-3 font-semibold text-gray-800">よ ん だ ほ ん</div>
         <div className="border w-28"></div>
       </div>
-      <div className="flex flex-wrap -m-4 mb-5">
-        {posts && posts.map((post) => <Post key={post.id} post={post} />)}
+      <div className="flex flex-wrap -m-4 mb-5 text-gray-800 font-medium">
+        {posts && posts.map((post) => <Post key={post.id} post={post}/>)}
       </div>
     </div>
   );
