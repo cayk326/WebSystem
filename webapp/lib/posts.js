@@ -3,7 +3,8 @@ import fetch from "node-fetch";
 // Django APIサーバーURL
 //const SERVERURL = "http://127.0.0.1:8000/";
 
-const SERVERURL = "http://172.18.0.4:8000/";
+const SERVERURL = "http://backend:8000/";
+
 
 
 // 投稿一覧を取得

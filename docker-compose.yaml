@@ -12,7 +12,7 @@ services:
       - POSTGRES_HOST=db
     networks:
       app_net:
-        ipv4_address: 172.18.0.2
+        #ipv4_address: 172.18.0.2
     
     ports:
       - 5432:5432
@@ -35,7 +35,7 @@ services:
       - db
     networks:
       app_net:
-        ipv4_address: 172.18.0.3
+        #ipv4_address: 172.18.0.3
 
   backend:
     container_name: websystem_backend
@@ -49,13 +49,13 @@ services:
     volumes:
       - ./backend:/app/backend
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./backend/static:/app/backend/static
-      - ./backend/media/images:/app/backend/images
+      - static:/app/backend/static
+      - ./backend/media:/app/backend/media
     ports:
       - 8000:8000
     networks:
       app_net:
-        ipv4_address: 172.18.0.4
+        #ipv4_address: 172.18.0.4
     links:
       - db:db
 
@@ -67,17 +67,20 @@ services:
     tty: true
     networks:
       app_net:
-        ipv4_address: 172.18.0.5
+        #ipv4_address: 172.18.0.5
     command:
       "npm run dev"
     volumes:
-      - ./webapp:/webapp
+      - ./webapp:/Qwebapp
       - /var/run/docker.sock:/var/run/docker.sock
       - node-modules:/webapp/node_modules
     ports:
       - 3000:3000
     links:
       - backend:backend
+    depends_on:
+      - backend
+
 
   nginx:
     container_name: websystem_nginx
@@ -88,7 +91,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./backend/static:/app/backend/static
+      - static:/app/backend/static
     ports:
       - 80:80
     links: 
@@ -96,19 +99,20 @@ services:
       - webapp
     networks:
       app_net:
-        ipv4_address: 172.18.0.6
+        #ipv4_address: 172.18.0.6
     command: [nginx-debug, '-g', 'daemon off;']
 
 networks:
   app_net:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.18.0.0/16
+    # driver: bridge
+    # ipam:
+    #   driver: default
+    #   config:
+    #     - subnet: 172.18.0.0/16
 
 volumes:
   postgres_data:
   pgadmin4_data:
   node-modules:
   static:
+  media: 
