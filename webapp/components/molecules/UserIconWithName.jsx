@@ -4,10 +4,6 @@ import { useRecoilValue } from "recoil";
 export const UserIconWithName = memo((props) => {
   console.log("UserIconWithName");
   const { image, name, height, width } = props;
-
-
-
-
   return (
     <div className="text-center">
       <img
