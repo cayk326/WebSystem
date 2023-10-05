@@ -150,9 +150,13 @@ To get a local copy up and running, follow these simple steps:
    /Websystem $ docker-compose up
    ```
    Frontend: http://localhost:3000/
+
    django admin: http://localhost:8000/admin/
+
    django Rest API, POST: http://localhost:8000/api/post/
+
    django Rest API POST Detail: http://localhost:8000/api/post/[key]/
+   
    pgAdmin4: http://localhost:8888/
 
 2. Data registration
