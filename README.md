@@ -65,7 +65,7 @@ To get a local copy up and running, follow these simple steps:
    Currently, you cannot access localhost:3000 because next.js can not fetch data from a backend server.
    So you need to execute migration commands to run a system.
    ```sh
-      /Websystem $ docker-compose exec backend python manage.py 
+      /Websystem $ docker-compose exec backend python manage.py makemigrations
 
                      Migrations for 'account':
                      /usr/local/lib/python3.9/site-packages/allauth/account/migrations/0003_auto_20231005_1545.py
@@ -76,7 +76,9 @@ To get a local copy up and running, follow these simple steps:
                         - Alter field id on socialaccount
                         - Alter field id on socialapp
                         - Alter field id on socialtoken
-
+   ```
+   
+   ```sh
       /Websystem $ docker-compose exec backend python manage.py migrate
                      Operations to perform:
                      Apply all migrations: account, accounts, admin, auth, authtoken, contenttypes, products, sessions, sites, socialaccount
@@ -156,7 +158,7 @@ To get a local copy up and running, follow these simple steps:
    django Rest API, POST: http://localhost:8000/api/post/
 
    django Rest API POST Detail: http://localhost:8000/api/post/[key]/
-   
+
    pgAdmin4: http://localhost:8888/
 
 2. Data registration
