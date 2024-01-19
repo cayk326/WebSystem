@@ -129,7 +129,7 @@ MIDDLEWARE = [
 
 # 追加 localhost:3000からのアクセスを許可
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    "http://localhost:3000", "http://localhost:8080"
 ]
 
 

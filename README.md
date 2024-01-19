@@ -46,6 +46,20 @@ To get a local copy up and running, follow these simple steps:
    POSTGRES_HOST=db
    POSTGRES_PORT=5432
    ```
+   
+   Also you have to create .env.local on: Websystem/webapp
+   ```sh
+   NEXTAUTH_URL=http://127.0.0.1:3000
+   DJANGO_URL=http://127.0.0.1:8000
+
+
+   GOOGLE_CLIENT_ID=YOUR GOOGLE_CLIENT_ID
+   GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
+   ```
+   This URL is helpful to create API settings using OAuth.
+   https://cloud.google.com/apigee/docs/api-platform/security/oauth/using-jwt-oauth
+   
+
 
 3. Place top.png on Websystem/webapp/public
    This image will be displayed on the top page.
