@@ -23,7 +23,7 @@ export default function PostData({ post }) {
   );
 }
 
-// 投稿一覧の ID を取得
+// 投稿一覧のIDを取得
 export async function getStaticPaths() {
   const paths = await getAllPostIds();
 

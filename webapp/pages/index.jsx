@@ -13,7 +13,7 @@ export default function Home({ posts }) {
       <div className="mb-10 p-3">
         <Image
           className="object-cover rounded"
-          src="/top2.jpg"
+          src="/top.jpg"
           alt="top"
           width={1280}
           height={500}
